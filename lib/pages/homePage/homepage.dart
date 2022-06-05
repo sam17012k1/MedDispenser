@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:alarms_app/pages/alarmsPage/alarmspage.dart';
+import 'package:alarms_app/pages/historyPage/historypage.dart';
+import 'package:alarms_app/pages/historyPage/historylandingpage.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -11,29 +13,45 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int currIndex=0;
 
-  final screens=[
-    const Center(child: Text("History",style: TextStyle(fontSize: 25)),),
-    const Center(child: Text("Profile",style: TextStyle(fontSize: 25)),),
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFFFAFAFA),
+
+      // AppBar
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
         title: const Text("Med Dispenser"),
       ),
+
+      // Body
       body: IndexedStack(
         index: currIndex,
-        children: const [
-          AlarmsPage(),
-          Center(child: Text("History",style: TextStyle(fontSize: 25)),),
-          Center(child: Text("Profile",style: TextStyle(fontSize: 25)),),
+        children: [
+          const AlarmsPage(),
+          const HistoryPage(),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Icon(Icons.lock_outline, size: 32, 
+                  color: Color(0xFF39A377),
+                ),
+                Text('Oops! Profiles are locked right now',
+                  style: TextStyle(
+                    color: Color(0xFF39A377),
+                  ),
+                )
+              ],
+            ),
+          )
         ],
       ),
+
+      // Bottom Navigation Bar
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currIndex,
         onTap: (index) => setState(() {
@@ -51,6 +69,7 @@ class _HomePageState extends State<HomePage> {
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
         ],
       ),
+
     );
   }
 }

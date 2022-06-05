@@ -54,7 +54,7 @@ class Reminder extends StatelessWidget {
           children: [
             Text(dayTime,style: kPrescriptionBoxTitle),
             const Spacer(),
-            Text(time, style: kPrescriptionBoxTitle.copyWith(color: Colors.purpleAccent),)
+            Text(time, style: kPrescriptionBoxTitle.copyWith(color: Colors.deepPurple, fontSize: 14),)
           ],
         ),
         Text(text, style: kPrescriptionBoxSubtitle),
@@ -66,7 +66,7 @@ class Reminder extends StatelessWidget {
                 width: 200,
                 child: ListTile(
                   minLeadingWidth: 0,
-                  leading: Icon(Icons.medication_rounded),
+                  leading: Icon(Icons.medication_rounded, color: Colors.green,),
                   title: Text('Paracetamol'),
                   subtitle: Text('2'),
                 ),
@@ -75,14 +75,14 @@ class Reminder extends StatelessWidget {
                 width: 200,
                 child: ListTile(
                   minLeadingWidth: 0,
-                  leading: Icon(Icons.medication_rounded),
+                  leading: Icon(Icons.medication_rounded, color: Colors.green,),
                   title: Text('Paracetamol'),
                   subtitle: Text('2'),
                 ),
               ),
             ],
           ),
-        )
+        ),
       ],
     );
   }

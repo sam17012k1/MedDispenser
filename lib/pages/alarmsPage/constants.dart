@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-const kProfileBoxTitleTextStyle = TextStyle(
-  fontWeight: FontWeight.bold,
-  fontSize: 16,
-  color: Color(0xFF323740)
-);
+// const kProfileBoxTitleTextStyle = TextStyle(
+//   fontWeight: FontWeight.bold,
+//   fontSize: 16,
+//   color: Color(0xFF323740)
+// );
 
-const kProfileBoxSubtitleTextStyle = TextStyle(
-  fontSize: 14,
-  fontWeight: FontWeight.w500,
-  color: Color(0xFF323740)
-);
+// const kProfileBoxSubtitleTextStyle = TextStyle(
+//   fontSize: 14,
+//   fontWeight: FontWeight.w500,
+//   color: Color(0xFF323740)
+// );
 
 const kDayTextStyle = TextStyle(
   fontSize: 14,
@@ -20,7 +20,7 @@ const kDayTextStyle = TextStyle(
 
 
 const kPrescriptionBoxTitle = TextStyle(
-  fontSize: 14,
+  fontSize: 18,
   fontWeight: FontWeight.bold,
   color: Color(0xFF323740)
 );
